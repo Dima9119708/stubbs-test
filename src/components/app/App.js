@@ -4,10 +4,10 @@ import Form from "../form/Form";
 
 
 const App = () => (
-    <div className="main">
+    <main className="main">
         <Chat/>
         <Form/>
-    </div>
+    </main>
 );
 
 export default App;

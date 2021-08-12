@@ -37,8 +37,8 @@ const Chat = () => {
             {
                 messages.map( ({ message, date, id }, idx) =>
                     <div className="chat__item" onClick={() => onClick(idx)} key={id} >
-                        <div className="chat__message">{ message }</div>
-                        <div className="chat__date">{ date }</div>
+                        <span className="chat__message">{ message }</span>
+                        <time className="chat__date">{ date }</time>
                     </div>
                 )
             }
