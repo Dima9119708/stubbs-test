@@ -19,8 +19,12 @@ const Form = () => {
         if (!message.trim()) return;
 
         const id = Date.now()
+
         const date = new Date()
-        const dateString = `${date.getHours()}:${date.getMinutes()}`
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+
+        const dateString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`
 
         dispatch(setMessageAction({ message, date: dateString, id }))
 
