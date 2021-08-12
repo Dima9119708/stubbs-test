@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/stubbs-test/static/css/main.df782632.chunk.css",
-    "main.js": "/stubbs-test/static/js/main.163e11b3.chunk.js",
-    "main.js.map": "/stubbs-test/static/js/main.163e11b3.chunk.js.map",
+    "main.css": "/stubbs-test/static/css/main.cb82e64f.chunk.css",
+    "main.js": "/stubbs-test/static/js/main.aee73fd7.chunk.js",
+    "main.js.map": "/stubbs-test/static/js/main.aee73fd7.chunk.js.map",
     "runtime-main.js": "/stubbs-test/static/js/runtime-main.762c892b.js",
     "runtime-main.js.map": "/stubbs-test/static/js/runtime-main.762c892b.js.map",
     "static/js/2.d976d411.chunk.js": "/stubbs-test/static/js/2.d976d411.chunk.js",
     "static/js/2.d976d411.chunk.js.map": "/stubbs-test/static/js/2.d976d411.chunk.js.map",
     "index.html": "/stubbs-test/index.html",
-    "static/css/main.df782632.chunk.css.map": "/stubbs-test/static/css/main.df782632.chunk.css.map",
+    "static/css/main.cb82e64f.chunk.css.map": "/stubbs-test/static/css/main.cb82e64f.chunk.css.map",
     "static/js/2.d976d411.chunk.js.LICENSE.txt": "/stubbs-test/static/js/2.d976d411.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/stubbs-test/static/media/rubik-regular.da39336c.ttf",
     "static/media/send.bcec1612.svg": "/stubbs-test/static/media/send.bcec1612.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.762c892b.js",
     "static/js/2.d976d411.chunk.js",
-    "static/css/main.df782632.chunk.css",
-    "static/js/main.163e11b3.chunk.js"
+    "static/css/main.cb82e64f.chunk.css",
+    "static/js/main.aee73fd7.chunk.js"
   ]
 }
