@@ -1,0 +1,17 @@
+@import "fonts";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Rubik", serif;
+  background-color: #E5E5E5;
+}
+
+* {
+  box-sizing: border-box;
+}
