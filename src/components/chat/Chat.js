@@ -1,6 +1,7 @@
 import React, {
     useEffect,
-    useRef
+    useRef,
+    useState
 } from 'react';
 import './index.scss'
 import {
@@ -10,18 +11,24 @@ import {
 import { setIDMessageAction } from "../../redux/reducer";
 
 const Chat = () => {
+    const [scroll, setScroll] = useState(true)
     const dispatch = useDispatch()
     const messages = useSelector(({ messages }) => messages)
     const $chat = useRef(null)
 
     useEffect(() => {
-        $chat.current.scrollTo({
-            top: $chat.current.scrollHeight,
-            behavior: "smooth"
-        })
+        if (scroll) {
+            $chat.current.scrollTo({
+                top: $chat.current.scrollHeight,
+                behavior: "smooth"
+            })
+        } else {
+            setScroll(true)
+        }
     }, [messages])
 
     const onClick = (id) => {
+        setScroll(false)
         dispatch(setIDMessageAction(id))
     }
 
