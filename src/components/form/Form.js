@@ -1,4 +1,7 @@
-import React, { useRef } from 'react';
+import React, {
+    useEffect,
+    useRef
+} from 'react';
 import "./index.scss"
 import send from './img/send.svg'
 import { useDispatch } from "react-redux";
@@ -9,6 +12,8 @@ import {
 const Form = () => {
     const dispatch = useDispatch()
     const $input = useRef(null)
+
+    useEffect(() => $input.current.focus(), [$input])
 
     const onSubmit = (e) => {
         e.preventDefault()
