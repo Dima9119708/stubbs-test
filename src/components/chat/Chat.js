@@ -3,9 +3,14 @@ import React, {
     useRef
 } from 'react';
 import './index.scss'
-import { useSelector } from "react-redux";
+import {
+    useDispatch,
+    useSelector
+} from "react-redux";
+import { setIDMessageAction } from "../../redux/reducer";
 
 const Chat = () => {
+    const dispatch = useDispatch()
     const messages = useSelector(({ messages }) => messages)
     const $chat = useRef(null)
 
@@ -16,13 +21,17 @@ const Chat = () => {
         })
     }, [messages])
 
+    const onClick = (id) => {
+        dispatch(setIDMessageAction(id))
+    }
+
     return (
         <div className="chat" ref={$chat}>
             {
-                messages.map( (obj, idx) =>
-                    <div key={idx} className="chat__item">
-                        <div className="chat__message">{ obj.message }</div>
-                        <div className="chat__date">{ obj.date }</div>
+                messages.map( ({ message, date, id }, idx) =>
+                    <div className="chat__item" onClick={() => onClick(idx)} key={id} >
+                        <div className="chat__message">{ message }</div>
+                        <div className="chat__date">{ date }</div>
                     </div>
                 )
             }

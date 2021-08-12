@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import "./index.scss"
 import send from './img/send.svg'
 import { useDispatch } from "react-redux";
@@ -8,6 +8,7 @@ import {
 
 const Form = () => {
     const dispatch = useDispatch()
+    const $input = useRef(null)
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -17,17 +18,24 @@ const Form = () => {
 
         if (!message.trim()) return;
 
+        const id = Date.now()
         const date = new Date()
         const dateString = `${date.getHours()}:${date.getMinutes()}`
 
-        dispatch(setMessageAction({ message, date: dateString }))
+        dispatch(setMessageAction({ message, date: dateString, id }))
 
         e.target.reset()
+        $input.current.focus()
     }
 
     return (
         <form onSubmit={onSubmit} className="form">
-            <input className="form__input" type="text" name="message" placeholder="Enter your message..."/>
+            <input className="form__input"
+                   ref={$input}
+                   type="text"
+                   name="message"
+                   placeholder="Enter your message..."
+            />
 
             <button className="form__submit" type="submit">
                 <img src={send} alt="send" />

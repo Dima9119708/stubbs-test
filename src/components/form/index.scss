@@ -32,10 +32,19 @@
     img {
       height: 20px;
       width: 20px;
+      transition: all .2s linear;
     }
 
     &:focus {
       outline: none;
+    }
+
+    &:hover {
+      img {
+        height: 25px;
+        width: 25px;
+        transition: all .2s linear;
+      }
     }
   }
 }
