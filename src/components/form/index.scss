@@ -33,5 +33,9 @@
       height: 20px;
       width: 20px;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }

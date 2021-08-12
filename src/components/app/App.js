@@ -3,13 +3,11 @@ import Chat from "../chat/Chat";
 import Form from "../form/Form";
 
 
-function App() {
-  return (
+const App = () => (
     <div className="main">
-        <Chat />
-        <Form />
+        <Chat/>
+        <Form/>
     </div>
-  );
-}
+);
 
 export default App;
